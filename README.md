@@ -81,7 +81,7 @@ Apache-2.0 © [半边](https://github.com/Mickey-/)
 
 [npm-image]: https://badge.fury.io/js/generator-rrrw.svg
 [npm-url]: https://npmjs.org/package/generator-rrrw
-[travis-image]: https://travis-ci.org/Mickey-/generator-rrrw.svg?branch=master
-[travis-url]: https://travis-ci.org/Mickey-/generator-rrrw
-[daviddm-image]: https://david-dm.org/Mickey-/generator-rrrw.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/Mickey-/generator-rrrw
+[travis-image]: https://travis-ci.org/59fe/generator-rrrw.svg?branch=master
+[travis-url]: https://travis-ci.org/59fe/generator-rrrw
+[daviddm-image]: https://david-dm.org/59fe/generator-rrrw.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org/59fe/generator-rrrw
