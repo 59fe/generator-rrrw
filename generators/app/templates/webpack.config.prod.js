@@ -65,7 +65,7 @@ module.exports = {
   postcss: [
     autoprefixer({
       <% if (mobileORpc == 'Mobile') { %>
-      browsers: [ 'Android >= 4', 'iOS > 6', 'ChromeAndroid']
+      browsers: [ 'Android >= 4', 'iOS > 6', 'last 10 Chrome versions']
       <% } else { %>
       browsers: [ 'last 10 Chrome versions', 'last 5 Firefox versions', 'Safari >= 6', 'ie > 8' ]
       <% } %>
