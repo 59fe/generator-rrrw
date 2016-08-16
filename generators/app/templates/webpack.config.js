@@ -25,12 +25,12 @@ module.exports = {
       {
         test: /\.less$/,
         exclude: path.resolve(__dirname, './node_modules'),
-        loader: 'style-loader!css-loader?modules&camelCase&importLoaders=1&localIdentName=[local]__[hash:base64:5]!postcss-loader!less-loader'
+        loader: 'style-loader!css-loader?modules&camelCase&importLoaders=1&localIdentName=[local]__[hash:base64:6]!postcss-loader!less-loader'
       },
       {
         test: /\.css$/,
         exclude: path.resolve(__dirname, './node_modules'),
-        loader: 'style-loader!css-loader?modules&camelCase&importLoaders=1&localIdentName=[local]__[hash:base64:5]!postcss-loader'
+        loader: 'style-loader!css-loader?modules&camelCase&importLoaders=1&localIdentName=[local]__[hash:base64:6]!postcss-loader'
       },
       {
         test: /\.less$/,
@@ -51,7 +51,7 @@ module.exports = {
         ]
       },
       {test: /\.json$/, loader: 'json-loader'},
-      {test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192&name=[name]_[hash:5].[ext]'}
+      {test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192&name=[name]_[hash:6].[ext]'}
     ]
   },
   resolve: {

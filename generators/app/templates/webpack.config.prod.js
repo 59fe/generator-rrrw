@@ -19,7 +19,7 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, './dist'),
-    filename: '[name].[hash:5].js',
+    filename: '[name].[hash:7].js',
     publicPath: 'http://localhost/'  //TODO modify to http://fecdn.59store.com/
   },
   module: {
@@ -27,12 +27,12 @@ module.exports = {
       {
         test: /\.less$/,
         exclude: path.resolve(__dirname, './node_modules'),
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&minimize&camelCase&importLoaders=1&localIdentName=[local]__[hash:base64:5]!postcss-loader!less-loader')
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&minimize&camelCase&importLoaders=1&localIdentName=[local]__[hash:base64:6]!postcss-loader!less-loader')
       },
       {
         test: /\.css$/,
         exclude: path.resolve(__dirname, './node_modules'),
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&minimize&camelCase&importLoaders=1&localIdentName=[local]__[hash:base64:5]!postcss-loader')
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&minimize&camelCase&importLoaders=1&localIdentName=[local]__[hash:base64:6]!postcss-loader')
       },
       {
         test: /\.less$/,
@@ -53,7 +53,7 @@ module.exports = {
         ]
       },
       {test: /\.json$/, loader: 'json-loader'},
-      {test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192&name=[name]_[hash:5].[ext]'}
+      {test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192&name=[name]_[hash:6].[ext]'}
     ]
   },
   resolve: {
@@ -72,8 +72,8 @@ module.exports = {
     })
   ],
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin('lib', 'lib.[hash:5].js'),
-    new ExtractTextPlugin("[name].[hash:5].css"),
+    new webpack.optimize.CommonsChunkPlugin('lib', 'lib.[hash:7].js'),
+    new ExtractTextPlugin("[name].[hash:7].css"),
     new webpack.DefinePlugin({
       'process.env': { NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development') }
     }),
