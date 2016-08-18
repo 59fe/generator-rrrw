@@ -19,7 +19,7 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, './dist'),
-    filename: '[name].[hash:7].js',
+    filename: '[name].[chunkhash:10].js',
     publicPath: 'http://localhost/'  //TODO modify to http://fecdn.59store.com/
   },
   module: {
@@ -72,8 +72,8 @@ module.exports = {
     })
   ],
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin('lib', 'lib.[hash:7].js'),
-    new ExtractTextPlugin("[name].[hash:7].css"),
+    new webpack.optimize.CommonsChunkPlugin('lib', 'lib.[chunkhash:10].js'),
+    new ExtractTextPlugin("[name].[chunkhash:10].css"),
     new webpack.DefinePlugin({
       'process.env': { NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development') }
     }),
