@@ -7,7 +7,7 @@
   "repository": "git@code.59store.com:fe/rrrw.git",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server -d --history-api-fallback --hot --inline --progress --colors --port 5959",
+    "start": "webpack-dashboard  -c cyan -- webpack-dev-server -d --history-api-fallback --hot --inline --progress --colors --port 5959",
     "build": "rm -rf dist/ && NODE_ENV=production webpack --config webpack.config.prod.js --progress --colors"
   },
   "dependencies": {
@@ -35,6 +35,7 @@
     "html-webpack-plugin": "^2.17.0",
     "babel-runtime": "^6.5.0",
     "classnames": "^2.2.3",
+    "webpack": "^1.12.14",
     "react": "^15.0.0",
     "react-dom": "^15.0.0",
     "react-redux": "^4.4.0",
@@ -44,8 +45,8 @@
     "redux-actions": "^0.9.1"
   },
   "devDependencies": {
-    "webpack": "^1.12.14",
     "webpack-dev-server": "^1.14.1",
+    "webpack-dashboard": "^0.1.6",
     "react-hot-loader": "^1.3.0",
     "webpack-hot-middleware": "^2.7.1",
     "eslint-plugin-react": "~5.1.1"
