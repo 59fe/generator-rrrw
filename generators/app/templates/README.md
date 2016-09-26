@@ -34,7 +34,7 @@ src/
 
 - [x] [React](https://facebook.github.io/react/)
 <% if (mobileORpc == 'Mobile') { %>
-- [x] __[MSUI - Mobile 59Store UI](http://swallow.59store.net:2333/msui/docs/)__
+- [x] __[MSUI - Mobile 59Store UI](http://msui.59store.net/)__
 <% } %>
 - [x] [Redux](https://github.com/reactjs/redux)
 - [x] [React Router Redux](https://github.com/reactjs/react-router-redux)
