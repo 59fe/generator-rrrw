@@ -65,34 +65,36 @@ module.exports = yeoman.Base.extend({
   writing: function () {
     var compilePath = this.templatePath(),
       files = fs.readdirSync(compilePath)
-      this.fs.copyTpl(
-        this.templatePath(),
-        this.destinationPath(),
-        this.props
-      )
-      this.fs.copy(
-        this.templatePath('./.*'),
-        this.destinationRoot()
-      )
-      this.fs.copyTpl(
-        this.templatePath('.babelrc'),
-        this.destinationPath('.babelrc'),
-        this.props
-      )
-    /*  不需要修正npm的问题了
-    // 修正npm， https://github.com/npm/npm/issues/1862
-    var niPath = this.templatePath('.npmignore')
-    this.copy(
-      (this.fs.exists(niPath) ? niPath : this.templatePath('.gitignore')),
-      this.destinationPath('.gitignore')
+    this.fs.copyTpl(
+      this.templatePath(),
+      this.destinationPath(),
+      this.props
     )
-    */
+    this.fs.copy(
+      this.templatePath('./.*'),
+      this.destinationRoot()
+    )
+    this.fs.copyTpl(
+      this.templatePath('.babelrc'),
+      this.destinationPath('.babelrc'),
+      this.props
+    )
   },
 
   install: function () {
+    // 修正npm， https://github.com/npm/npm/issues/1862
+    var niPath = this.destinationPath('.npmignore')
+    fs.access(niPath, (err) => {
+      if (err) console.log(err)
+      fs.renameSync(niPath, this.destinationPath('.gitignore'))
+    })
+
     this.npmInstall();
     this.on('end', function(){
       this.log.ok('React工程初始化完成，你可以执行' + chalk.green(' npm start ') + '开启dev server 查看示例')
     })
+  },
+
+  end: function() {
   }
 });
