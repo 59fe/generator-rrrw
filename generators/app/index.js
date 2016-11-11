@@ -29,32 +29,32 @@ module.exports = yeoman.Base.extend({
       type    : 'input',
       name    : 'product',
       message : '请输入产品中文名称（如：店长PC Web后台系统）',
-      default : '59store大前端'
+      default : '奇迹大树'
     }, {
       type    : 'input',
       name    : 'users',
-      message : '请输入面向的用户群（如：59store店长）',
+      message : '请输入面向的用户群（如：店长）',
       default : '学生消费者'
     }, {
       type    : 'input',
       name    : 'fe',
       message : '请输入项目负责前端的花名，多人用逗号隔开',
-      default : '半边，换换，小巡'
+      default : '半边'
     }, {
       type    : 'input',
       name    : 'rd',
       message : '请输入项目合作后端的花名，多人用逗号隔开',
-      default : '凌云，沉思'
+      default : '凌云，庆攀'
     }, {
       type    : 'input',
       name    : 'pd',
       message : '请输入项目合作产品的花名，多人用逗号隔开',
-      default : '小易'
+      default : '雷欧'
     }, {
       type    : 'input',
       name    : 'ue',
       message : '请输入项目合作设计师的花名，多人用逗号隔开',
-      default : '雷欧'
+      default : '周末'
     }];
 
     return this.prompt(prompts).then(function (props) {
@@ -79,9 +79,9 @@ module.exports = yeoman.Base.extend({
         this.destinationPath('.babelrc'),
         this.props
       )
-    /*
+    /*  不需要修正npm的问题了
     // 修正npm， https://github.com/npm/npm/issues/1862
-    var niPath = this.templatePath('pure_files/.npmignore')
+    var niPath = this.templatePath('.npmignore')
     this.copy(
       (this.fs.exists(niPath) ? niPath : this.templatePath('.gitignore')),
       this.destinationPath('.gitignore')
