@@ -34,7 +34,7 @@ module.exports = yeoman.Base.extend({
       type    : 'input',
       name    : 'users',
       message : '请输入面向的用户群（如：店长）',
-      default : '学生消费者'
+      default : '社会消费者'
     }, {
       type    : 'input',
       name    : 'fe',
@@ -44,7 +44,7 @@ module.exports = yeoman.Base.extend({
       type    : 'input',
       name    : 'rd',
       message : '请输入项目合作后端的花名，多人用逗号隔开',
-      default : '凌云，庆攀'
+      default : '庆攀'
     }, {
       type    : 'input',
       name    : 'pd',
@@ -54,7 +54,7 @@ module.exports = yeoman.Base.extend({
       type    : 'input',
       name    : 'ue',
       message : '请输入项目合作设计师的花名，多人用逗号隔开',
-      default : '周末'
+      default : '华伟'
     }];
 
     return this.prompt(prompts).then(function (props) {
