@@ -20,7 +20,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, './dist'),
     filename: '[name].[chunkhash:10].js',
-    publicPath: 'http://localhost/'  //TODO modify to http://fecdn.59store.com/
+    publicPath: 'http://localhost/'  //TODO modify to http://fecdn.qeebike.com/
   },
   module: {
     loaders: [
